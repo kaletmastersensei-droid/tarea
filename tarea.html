@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapa Mental: Derechos Humanos, Ciudadanía e Inclusión Social</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/style/jsmind.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/js/jsmind.js"></script>
+</head>
+<body>
+  <div id="jsmind_container" style="width:100%; height: 700px; border: solid 1px #ccc;"></div>
+
+  <script>
+    // 1. Definición de datos en formato node_array
+    var mind = {
+      meta: {
+        name: "mapa_kk",
+        author: "Kaletmaster",
+        version: "1.0"
+      },
+      format: "node_array",
+      data: [
+        { id: "root", isroot: true, topic: "Derechos Humanos,\nCiudadanía e\nInclusión Social" },
+
+        // Derechos Humanos
+        { id: "dh", parentid: "root", topic: "Derechos Humanos" },
+        { id: "dh1", parentid: "dh", topic: "Universalidad" },
+        { id: "dh2", parentid: "dh", topic: "Progresividad" },
+        { id: "dh3", parentid: "dh", topic: "No discriminación" },
+        { id: "dh4", parentid: "dh", topic: "Const. Mex (Art. 1)" },
+        { id: "dh5", parentid: "dh", topic: "Declaración Universal\n(1948)" },
+        { id: "gen", parentid: "dh", topic: "Generaciones" },
+        { id: "gen1", parentid: "gen", topic: "1ª: civiles, políticos" },
+        { id: "gen2", parentid: "gen", topic: "2ª: sociales,\neconómicos" },
+        { id: "gen3", parentid: "gen", topic: "3ª: colectivos,\nambientales" },
+
+        // Ciudadanía
+        { id: "ct", parentid: "root", topic: "Ciudadanía" },
+        { id: "ct1", parentid: "ct", topic: "Derechos y deberes" },
+        { id: "ct2", parentid: "ct", topic: "Participación democrática" },
+        { id: "ct3", parentid: "ct", topic: "Voto, asociación,\ninformación" },
+        { id: "ct4", parentid: "ct", topic: "Grecia clásica\n(exclusión de\nmujeres)" },
+        { id: "ct5", parentid: "ct", topic: "Igualdad jurídica" },
+
+        // Inclusión Social
+        { id: "is", parentid: "root", topic: "Inclusión Social\n(Objetivo 10)" },
+        { id: "is1", parentid: "is", topic: "Reducción de desigualdad" },
+        { id: "is2", parentid: "is", topic: "Ingresos del 40% más pobre" },
+        { id: "is3", parentid: "is", topic: "Eliminación de discriminación" },
+        { id: "is4", parentid: "is", topic: "Políticas fiscales y sociales" },
+        { id: "is5", parentid: "is", topic: "Migración segura" },
+        { id: "is6", parentid: "is", topic: "Remesas accesibles" },
+        { id: "is7", parentid: "is", topic: "Cooperación internacional" },
+
+        // Liberalismo
+        { id: "lib", parentid: "root", topic: "Liberalismo" },
+        { id: "lib1", parentid: "lib", topic: "Libertad individual" },
+        { id: "lib2", parentid: "lib", topic: "Propiedad privada" },
+        { id: "lib3", parentid: "lib", topic: "Libre mercado" },
+        { id: "lib4", parentid: "lib", topic: "División de poderes" },
+        { id: "lib5", parentid: "lib", topic: "Democracia representativa" },
+        { id: "lib6", parentid: "lib", topic: "Críticas:\ndesigualdad,\ndesregulación" },
+
+        // Mujeres en Ciencia y Educación
+        { id: "muj", parentid: "root", topic: "Mujeres en Ciencia\ny Educación" },
+        { id: "muj1", parentid: "muj", topic: "Casa de la Mujer" },
+        { id: "muj2", parentid: "muj", topic: "Esc. Nacional de\nMaestras" },
+        { id: "muj3", parentid: "muj", topic: "Siglo XIX–XXI" },
+        { id: "muj4", parentid: "muj", topic: "Línea del tiempo" },
+        { id: "muj5", parentid: "muj", topic: "Inclusión educativa" },
+        { id: "muj6", parentid: "muj", topic: "Participación científica" }
+      ]
+    };
+
+    // 2. Opciones de visualización
+    var options = {
+      container: "jsmind_container",
+      theme: "primary",          // temas: primary, info, warning, danger...
+      editable: false,
+      view: {
+        hmargin: 100,
+        vmargin: 50,
+        line_width: 2,
+        line_color: "#555"
+      }
+    };
+
+    // 3. Renderizar el mapa mental
+    var jm = new jsMind(options);
+    jm.show(mind);
+  </script>
+</body>
+</html>
